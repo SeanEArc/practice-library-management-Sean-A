@@ -22,6 +22,9 @@ class book extends LibraryItem{
         this.author = author;
         this.genre = genre;
     }
+    bookDetails(){
+        console.log(`This book is written by ${this.author} and is considered a ${this.genre} book.`)
+    }
 }
 
 class dvd extends LibraryItem{
@@ -29,6 +32,9 @@ class dvd extends LibraryItem{
         super();
         this.director = director;
         this.duration = duration;
+    }
+    movieDetails(){
+        console.log(`This movie was directed by ${this.director} and is ${this.duration} hours long.`)
     }
 }
 
@@ -38,10 +44,17 @@ class magazine extends LibraryItem{
         this.issueNumber = issueNumber;
         this.publisher = publisher;
     }
+    magazineDetails(){
+        console.log(`This magazine's issue number is ${this.issueNumber} and was published by ${this.publisher} `)
+    }
 }
 let bookItem = new book('J.K. Rowling', 'Fantasy');
+bookItem.bookDetails()
 let dvdItem = new dvd('Another J.K. Rowling', '52 hours');
+dvdItem.movieDetails()
 let magazineItem = new magazine(9878676, 'Vogue');
+magazineItem.magazineDetails()
+
 let userLibraryItem = new LibraryItem('Harry Potter',123345 , true);
 
 
