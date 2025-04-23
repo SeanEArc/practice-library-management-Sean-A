@@ -6,10 +6,12 @@ class LibraryItem{
         this.isAvailable = isAvailable;
     }
     checkOut() {
-        return this.isAvailable = false
+        this.isAvailable = false
+        console.log(`\nPlease make sure to return ${this.title}`)
     }
     returnItem() {
-        return this.isAvailable = true
+        this.isAvailable = true
+        console.log(`\nThank you for returning ${this.title}`)
     }
 
 }
@@ -52,7 +54,8 @@ console.log(magazineItem);
 
 magazineItem.returnItem();
 console.log(magazineItem);
-console.log("Below are the inherited classes and the last one is a userLibrary Item:\n");
+
+console.log("\nBelow are the inherited classes and the last one is a userLibrary Item:");
 console.log(bookItem);
 console.log(dvdItem);
 console.log(magazineItem);
